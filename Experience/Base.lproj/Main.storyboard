@@ -1,26 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BkX-Wa-HhW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ARView-->
-        <scene sceneID="tne-QT-ifu">
+        <!--View Controller-->
+        <scene sceneID="QTT-c2-Qrl">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="ARView" customClass="ViewController" customModule="target" customModuleProvider="target" sceneMemberID="viewController">
-                    <arView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BkX-Wa-HhW" customClass="ViewController" customModule="Experience" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1S8-dG-FxJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arView>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" enableRayTracedShadows="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SV9-Nu-8Is">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" segmentControlStyle="plain" selectedSegmentIndex="0" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ftI-we-pvZ">
+                                <rect key="frame" x="122.5" y="797" width="169" height="32"/>
+                                <segments>
+                                    <segment title="Normal"/>
+                                    <segment title="Go Insane!"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="BkX-Wa-HhW" eventType="valueChanged" id="1Hk-u5-KHP"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.counterclockwise.circle" catalog="system" highlightedImage="arrow.counterclockwise.circle.fill" translatesAutoresizingMaskIntoConstraints="NO" id="nU1-WK-YCB">
+                                <rect key="frame" x="37" y="60" width="47" height="48"/>
+                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="MFs-AQ-oai"/>
+                                    <constraint firstAttribute="height" constant="48.5" id="Mi7-c7-RGJ"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="medium"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SV9-Nu-8Is" firstAttribute="leading" secondItem="1S8-dG-FxJ" secondAttribute="leading" id="Jxn-JF-2Bq"/>
+                            <constraint firstItem="nU1-WK-YCB" firstAttribute="leading" secondItem="ORd-G6-MnZ" secondAttribute="leading" constant="37" id="NuQ-u9-Pip"/>
+                            <constraint firstItem="ORd-G6-MnZ" firstAttribute="bottom" secondItem="ftI-we-pvZ" secondAttribute="bottom" constant="34" id="Wns-G7-qKw"/>
+                            <constraint firstItem="SV9-Nu-8Is" firstAttribute="bottom" secondItem="1S8-dG-FxJ" secondAttribute="bottom" id="X3x-7p-ykT"/>
+                            <constraint firstItem="ftI-we-pvZ" firstAttribute="centerX" secondItem="1S8-dG-FxJ" secondAttribute="centerX" id="dp3-a0-gRS"/>
+                            <constraint firstAttribute="trailing" secondItem="SV9-Nu-8Is" secondAttribute="trailing" id="eQX-lS-qcO"/>
+                            <constraint firstAttribute="top" secondItem="SV9-Nu-8Is" secondAttribute="top" id="sCn-3W-4Zt"/>
+                            <constraint firstItem="nU1-WK-YCB" firstAttribute="top" secondItem="ORd-G6-MnZ" secondAttribute="top" constant="16" id="yCg-DV-Ebp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ORd-G6-MnZ"/>
+                    </view>
                     <connections>
-                        <outlet property="arView" destination="8bC-Xf-vdC" id="TPV-4x-avp"/>
+                        <outlet property="arView" destination="SV9-Nu-8Is" id="s0d-6g-ceQ"/>
+                        <outlet property="resetAR" destination="nU1-WK-YCB" id="VAb-EK-oXJ"/>
+                        <outlet property="weekSegment" destination="ftI-we-pvZ" id="p5z-DX-PjI"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2oV-7z-Sva" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="134"/>
+            <point key="canvasLocation" x="952.17391304347836" y="12.723214285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.counterclockwise.circle" catalog="system" width="64" height="60"/>
+        <image name="arrow.counterclockwise.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
 </document>

@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		FFD69D6523D1C4F200AD28C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD69D6423D1C4F200AD28C5 /* AppDelegate.swift */; };
 		FFD69D6723D1C4F200AD28C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD69D6623D1C4F200AD28C5 /* ViewController.swift */; };
-		FFD69D6923D1C4F200AD28C5 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = FFD69D6823D1C4F200AD28C5 /* Experience.rcproject */; };
 		FFD69D6C23D1C4F200AD28C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD69D6A23D1C4F200AD28C5 /* Main.storyboard */; };
 		FFD69D6E23D1C4F500AD28C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD69D6D23D1C4F500AD28C5 /* Assets.xcassets */; };
 		FFD69D7123D1C4F500AD28C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD69D6F23D1C4F500AD28C5 /* LaunchScreen.storyboard */; };
+		FFF3544C23DFADB900A7DAC1 /* demo.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = FFF3544B23DFADB900A7DAC1 /* demo.rcproject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FFD69D6123D1C4F200AD28C5 /* Experience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Experience.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD69D6423D1C4F200AD28C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD69D6623D1C4F200AD28C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FFD69D6823D1C4F200AD28C5 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		FFD69D6B23D1C4F200AD28C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFD69D6D23D1C4F500AD28C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFD69D7023D1C4F500AD28C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFD69D7223D1C4F500AD28C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFF3544B23DFADB900A7DAC1 /* demo.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = demo.rcproject; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +58,8 @@
 			children = (
 				FFD69D6423D1C4F200AD28C5 /* AppDelegate.swift */,
 				FFD69D6623D1C4F200AD28C5 /* ViewController.swift */,
-				FFD69D6823D1C4F200AD28C5 /* Experience.rcproject */,
 				FFD69D6A23D1C4F200AD28C5 /* Main.storyboard */,
+				FFF3544B23DFADB900A7DAC1 /* demo.rcproject */,
 				FFD69D6D23D1C4F500AD28C5 /* Assets.xcassets */,
 				FFD69D6F23D1C4F500AD28C5 /* LaunchScreen.storyboard */,
 				FFD69D7223D1C4F500AD28C5 /* Info.plist */,
@@ -139,8 +139,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFD69D6723D1C4F200AD28C5 /* ViewController.swift in Sources */,
+				FFF3544C23DFADB900A7DAC1 /* demo.rcproject in Sources */,
 				FFD69D6523D1C4F200AD28C5 /* AppDelegate.swift in Sources */,
-				FFD69D6923D1C4F200AD28C5 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,11 +287,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KDMH53532J;
 				INFOPLIST_FILE = Experience/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.demo.schoneshaus.Experience;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sh.Experience;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,11 +306,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KDMH53532J;
 				INFOPLIST_FILE = Experience/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.demo.schoneshaus.Experience;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sh.Experience;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
