@@ -1,70 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BkX-Wa-HhW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BkX-Wa-HhW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="QTT-c2-Qrl">
             <objects>
-                <viewController id="BkX-Wa-HhW" customClass="ViewController" customModule="Experience" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BkX-Wa-HhW" customClass="ARViewController" customModule="Experience" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1S8-dG-FxJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" enableRayTracedShadows="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SV9-Nu-8Is">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oet-bl-MI5" userLabel="experienceARView">
+                                <rect key="frame" x="0.0" y="66" width="414" height="774"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" segmentControlStyle="plain" selectedSegmentIndex="0" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ftI-we-pvZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRi-tO-YVV" userLabel="reloadARSceneBtn">
+                                <rect key="frame" x="38" y="795" width="36" height="35"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="arrow.counterclockwise.circle" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" weight="bold"/>
+                                </state>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" segmentControlStyle="plain" selectedSegmentIndex="0" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ftI-we-pvZ" userLabel="switchARSceneScale">
                                 <rect key="frame" x="122.5" y="797" width="169" height="32"/>
                                 <segments>
                                     <segment title="Normal"/>
                                     <segment title="Go Insane!"/>
                                 </segments>
-                                <color key="selectedSegmentTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
                                 <connections>
                                     <action selector="segmentChanged:" destination="BkX-Wa-HhW" eventType="valueChanged" id="1Hk-u5-KHP"/>
                                 </connections>
                             </segmentedControl>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.counterclockwise.circle" catalog="system" highlightedImage="arrow.counterclockwise.circle.fill" translatesAutoresizingMaskIntoConstraints="NO" id="nU1-WK-YCB">
-                                <rect key="frame" x="37" y="60" width="47" height="48"/>
-                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="47" id="MFs-AQ-oai"/>
-                                    <constraint firstAttribute="height" constant="48.5" id="Mi7-c7-RGJ"/>
-                                </constraints>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="medium"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLH-zN-X9l" userLabel="showARCollection">
+                                <rect key="frame" x="338" y="795" width="38" height="35"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="house" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="21" weight="bold"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="SV9-Nu-8Is" firstAttribute="leading" secondItem="1S8-dG-FxJ" secondAttribute="leading" id="Jxn-JF-2Bq"/>
-                            <constraint firstItem="nU1-WK-YCB" firstAttribute="leading" secondItem="ORd-G6-MnZ" secondAttribute="leading" constant="37" id="NuQ-u9-Pip"/>
-                            <constraint firstItem="ORd-G6-MnZ" firstAttribute="bottom" secondItem="ftI-we-pvZ" secondAttribute="bottom" constant="34" id="Wns-G7-qKw"/>
-                            <constraint firstItem="SV9-Nu-8Is" firstAttribute="bottom" secondItem="1S8-dG-FxJ" secondAttribute="bottom" id="X3x-7p-ykT"/>
-                            <constraint firstItem="ftI-we-pvZ" firstAttribute="centerX" secondItem="1S8-dG-FxJ" secondAttribute="centerX" id="dp3-a0-gRS"/>
-                            <constraint firstAttribute="trailing" secondItem="SV9-Nu-8Is" secondAttribute="trailing" id="eQX-lS-qcO"/>
-                            <constraint firstAttribute="top" secondItem="SV9-Nu-8Is" secondAttribute="top" id="sCn-3W-4Zt"/>
-                            <constraint firstItem="nU1-WK-YCB" firstAttribute="top" secondItem="ORd-G6-MnZ" secondAttribute="top" constant="16" id="yCg-DV-Ebp"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ORd-G6-MnZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mLH-zN-X9l" firstAttribute="centerY" secondItem="XRi-tO-YVV" secondAttribute="centerY" id="Izo-xK-epq"/>
+                            <constraint firstItem="ORd-G6-MnZ" firstAttribute="trailing" secondItem="mLH-zN-X9l" secondAttribute="trailing" constant="38" id="M6f-XG-wew"/>
+                            <constraint firstItem="ORd-G6-MnZ" firstAttribute="bottom" secondItem="ftI-we-pvZ" secondAttribute="bottom" constant="34" id="Wns-G7-qKw"/>
+                            <constraint firstItem="ftI-we-pvZ" firstAttribute="centerY" secondItem="XRi-tO-YVV" secondAttribute="centerY" id="ZU3-gx-qv4"/>
+                            <constraint firstItem="XRi-tO-YVV" firstAttribute="leading" secondItem="ORd-G6-MnZ" secondAttribute="leading" constant="38" id="dni-4d-Uqr"/>
+                            <constraint firstItem="ftI-we-pvZ" firstAttribute="centerX" secondItem="1S8-dG-FxJ" secondAttribute="centerX" id="dp3-a0-gRS"/>
+                            <constraint firstItem="ORd-G6-MnZ" firstAttribute="bottom" secondItem="XRi-tO-YVV" secondAttribute="bottom" constant="32" id="nnB-RH-vW6"/>
+                            <constraint firstItem="ORd-G6-MnZ" firstAttribute="bottom" secondItem="mLH-zN-X9l" secondAttribute="bottom" constant="32" id="oIg-hw-c7w"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="THY-of-6qT"/>
                     <connections>
-                        <outlet property="arView" destination="SV9-Nu-8Is" id="s0d-6g-ceQ"/>
-                        <outlet property="resetAR" destination="nU1-WK-YCB" id="VAb-EK-oXJ"/>
-                        <outlet property="weekSegment" destination="ftI-we-pvZ" id="p5z-DX-PjI"/>
+                        <outlet property="ARModeSegmentedControl" destination="ftI-we-pvZ" id="l2r-El-q1Z"/>
+                        <outlet property="experienceARView" destination="Oet-bl-MI5" id="dD9-Go-ccV"/>
+                        <outlet property="reloadARSceneBtn" destination="XRi-tO-YVV" id="J7Z-df-yD8"/>
+                        <outlet property="showARCollectionBtn" destination="mLH-zN-X9l" id="30r-AB-pxw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2oV-7z-Sva" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952.17391304347836" y="12.723214285714285"/>
+            <point key="canvasLocation" x="2574" y="-315"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="XjZ-p6-91G">
+            <objects>
+                <viewController storyboardIdentifier="ARCV" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5U0-Oh-I9b" customClass="ARCollectionViewController" customModule="Experience" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O9W-7n-idK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Exb-ef-XpU">
+                                <rect key="frame" x="0.0" y="167" width="414" height="729"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AR_Scene_Cell" rowHeight="221" id="bUK-E0-C6z" customClass="ARSceneCell" customModule="Experience" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="221"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bUK-E0-C6z" id="RvM-tn-SPf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="221"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ek3-jj-jFM">
+                                                    <rect key="frame" x="134.5" y="11" width="145" height="145"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="145" id="227-nA-gVi"/>
+                                                        <constraint firstAttribute="height" constant="145" id="GDY-UQ-O43"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFN-9c-AMN">
+                                                    <rect key="frame" x="176" y="174" width="62" height="29"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="LFN-9c-AMN" secondAttribute="bottom" constant="7" id="awf-xW-bmg"/>
+                                                <constraint firstItem="LFN-9c-AMN" firstAttribute="top" secondItem="ek3-jj-jFM" secondAttribute="bottom" constant="18" id="bnp-t8-dRD"/>
+                                                <constraint firstItem="ek3-jj-jFM" firstAttribute="top" secondItem="RvM-tn-SPf" secondAttribute="top" constant="11" id="dh5-dp-ne5"/>
+                                                <constraint firstItem="LFN-9c-AMN" firstAttribute="centerX" secondItem="RvM-tn-SPf" secondAttribute="centerX" id="q3n-aP-rg8"/>
+                                                <constraint firstItem="ek3-jj-jFM" firstAttribute="centerX" secondItem="RvM-tn-SPf" secondAttribute="centerX" id="zaf-po-A5p"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ARSceneImage" destination="ek3-jj-jFM" id="WEM-26-ouS"/>
+                                            <outlet property="ARSceneTitle" destination="LFN-9c-AMN" id="pMM-6h-U6F"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3uA-uc-YCF">
+                                <rect key="frame" x="0.0" y="71" width="414" height="96"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" systemColor="systemYellowColor"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="50" vertical="50"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="House" largeTitleDisplayMode="always" id="V5Y-ew-CMg"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cy0-VY-zBt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Exb-ef-XpU" firstAttribute="top" secondItem="cy0-VY-zBt" secondAttribute="top" constant="123" id="0yq-NN-g7m"/>
+                            <constraint firstItem="Exb-ef-XpU" firstAttribute="top" secondItem="3uA-uc-YCF" secondAttribute="bottom" id="3yT-g9-Lt4"/>
+                            <constraint firstItem="Exb-ef-XpU" firstAttribute="bottom" secondItem="cy0-VY-zBt" secondAttribute="bottom" constant="34" id="6Py-dg-lIz"/>
+                            <constraint firstItem="Exb-ef-XpU" firstAttribute="centerX" secondItem="cy0-VY-zBt" secondAttribute="centerX" id="7qp-mw-LgY"/>
+                            <constraint firstItem="Exb-ef-XpU" firstAttribute="leading" secondItem="cy0-VY-zBt" secondAttribute="leading" id="aHI-aO-F73"/>
+                            <constraint firstItem="cy0-VY-zBt" firstAttribute="trailing" secondItem="Exb-ef-XpU" secondAttribute="trailing" id="dBD-i2-nfa"/>
+                            <constraint firstItem="3uA-uc-YCF" firstAttribute="centerX" secondItem="Exb-ef-XpU" secondAttribute="centerX" id="mgC-cA-X5Y"/>
+                            <constraint firstItem="3uA-uc-YCF" firstAttribute="leading" secondItem="cy0-VY-zBt" secondAttribute="leading" id="xpP-tY-Ot0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="houseTableView" destination="Exb-ef-XpU" id="hU0-qD-Ld2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zY6-9D-Drq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3353.6231884057975" y="-315.40178571428572"/>
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.counterclockwise.circle" catalog="system" width="64" height="60"/>
-        <image name="arrow.counterclockwise.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="arrow.counterclockwise.circle" catalog="system" width="128" height="121"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF1ED0F02603F61E00A2C235 /* ARCollectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1ED0EF2603F61E00A2C235 /* ARCollectionTableViewController.swift */; };
+		FFCF80442605965D00FFB4B8 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCF80432605965D00FFB4B8 /* Utility.swift */; };
 		FFD69D6523D1C4F200AD28C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD69D6423D1C4F200AD28C5 /* AppDelegate.swift */; };
-		FFD69D6723D1C4F200AD28C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD69D6623D1C4F200AD28C5 /* ViewController.swift */; };
+		FFD69D6723D1C4F200AD28C5 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD69D6623D1C4F200AD28C5 /* ARViewController.swift */; };
 		FFD69D6C23D1C4F200AD28C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD69D6A23D1C4F200AD28C5 /* Main.storyboard */; };
 		FFD69D6E23D1C4F500AD28C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD69D6D23D1C4F500AD28C5 /* Assets.xcassets */; };
 		FFD69D7123D1C4F500AD28C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD69D6F23D1C4F500AD28C5 /* LaunchScreen.storyboard */; };
@@ -16,9 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF1ED0EF2603F61E00A2C235 /* ARCollectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCollectionTableViewController.swift; sourceTree = "<group>"; };
+		FFCF80432605965D00FFB4B8 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		FFD69D6123D1C4F200AD28C5 /* Experience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Experience.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD69D6423D1C4F200AD28C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FFD69D6623D1C4F200AD28C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FFD69D6623D1C4F200AD28C5 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		FFD69D6B23D1C4F200AD28C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFD69D6D23D1C4F500AD28C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFD69D7023D1C4F500AD28C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,12 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				FFD69D6423D1C4F200AD28C5 /* AppDelegate.swift */,
-				FFD69D6623D1C4F200AD28C5 /* ViewController.swift */,
+				FFD69D6623D1C4F200AD28C5 /* ARViewController.swift */,
+				FF1ED0EF2603F61E00A2C235 /* ARCollectionTableViewController.swift */,
 				FFD69D6A23D1C4F200AD28C5 /* Main.storyboard */,
 				FFF3544B23DFADB900A7DAC1 /* demo.rcproject */,
 				FFD69D6D23D1C4F500AD28C5 /* Assets.xcassets */,
 				FFD69D6F23D1C4F500AD28C5 /* LaunchScreen.storyboard */,
 				FFD69D7223D1C4F500AD28C5 /* Info.plist */,
+				FFCF80432605965D00FFB4B8 /* Utility.swift */,
 			);
 			path = Experience;
 			sourceTree = "<group>";
@@ -94,7 +100,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = "Ashutosh Mane";
 				TargetAttributes = {
 					FFD69D6023D1C4F200AD28C5 = {
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFD69D6723D1C4F200AD28C5 /* ViewController.swift in Sources */,
+				FFCF80442605965D00FFB4B8 /* Utility.swift in Sources */,
+				FFD69D6723D1C4F200AD28C5 /* ARViewController.swift in Sources */,
 				FFF3544C23DFADB900A7DAC1 /* demo.rcproject in Sources */,
+				FF1ED0F02603F61E00A2C235 /* ARCollectionTableViewController.swift in Sources */,
 				FFD69D6523D1C4F200AD28C5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +200,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -252,6 +261,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

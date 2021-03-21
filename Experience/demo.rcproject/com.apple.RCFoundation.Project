@@ -13,6 +13,14 @@
                 {
                   "__content" : [
                     {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
                       "actionGroups" : [
                         {
                           "__content" : [
@@ -151,11 +159,19 @@
                       ]
                     }
                   ],
-                  "__version" : 2
+                  "__version" : 3
                 },
                 {
                   "__content" : [
                     {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
                       "actionGroups" : [
                         {
                           "__content" : [
@@ -251,11 +267,19 @@
                       ]
                     }
                   ],
-                  "__version" : 2
+                  "__version" : 3
                 },
                 {
                   "__content" : [
                     {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
                       "actionGroups" : [
                         {
                           "__content" : [
@@ -394,7 +418,7 @@
                       ]
                     }
                   ],
-                  "__version" : 2
+                  "__version" : 3
                 }
               ],
               "gravity" : [
@@ -402,7 +426,6 @@
                 -9.8000001907348633,
                 0
               ],
-              "hasGroundPlane" : true,
               "identifier" : "BD6530A9-D8AF-4EEE-901A-0013B7FB2F38",
               "material" : "concrete",
               "overrides" : {
@@ -2689,26 +2712,36 @@
                   },
                   "Plate" : null
                 },
-                "factory" : null
+                "factory" : null,
+                "runtimeAttributes" : [
+                  [
+                    "isAccessibilityEnabled",
+                    {
+                      "typeName" : "Bool",
+                      "value" : false
+                    }
+                  ]
+                ]
               },
+              "physicsMode" : "grid",
               "title" : "DemoScene",
               "viewTransform" : {
                 "cameraTransform" : [
-                  0.98740929365158081,
+                  0.97681760787963867,
                   5.9604644775390625e-08,
-                  0.15818575024604797,
+                  0.21407313644886017,
                   0,
-                  0.053479697555303574,
-                  0.9411165714263916,
-                  -0.33382540941238403,
+                  0.075448267161846161,
+                  0.93583369255065918,
+                  -0.3442714512348175,
                   0,
-                  -0.14887100458145142,
-                  0.33808204531669617,
-                  0.92926740646362305,
+                  -0.20033660531044006,
+                  0.35244178771972656,
+                  0.91413891315460205,
                   0,
-                  0.17294192314147949,
-                  0.81758356094360352,
-                  1.9830532073974609,
+                  -0.71914786100387573,
+                  2.9793965816497803,
+                  6.4355025291442871,
                   1
                 ],
                 "sceneTransform" : [
@@ -2732,7 +2765,7 @@
               }
             }
           ],
-          "__version" : 4
+          "__version" : 5
         }
       ],
       "tags" : {
